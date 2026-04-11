@@ -1,0 +1,23 @@
+uuid: db72c8c6-705c-4985-80cb-b1a8e800de6f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:56e05767-285f-4c32-b43d-b8e89fff3473'
+  module:
+    - block_content
+  theme:
+    - nci
+id: nci_government_banner
+theme: nci
+region: header_top
+weight: 0
+provider: null
+plugin: 'block_content:56e05767-285f-4c32-b43d-b8e89fff3473'
+settings:
+  id: 'block_content:56e05767-285f-4c32-b43d-b8e89fff3473'
+  label: 'Government Banner'
+  label_display: ''
+  provider: block_content
+  view_mode: full
+visibility: {  }

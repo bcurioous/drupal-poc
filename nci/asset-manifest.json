@@ -1,0 +1,30 @@
+{
+  "source": "https://www.figma.com/make/UeaANpO56x0mFCAh2A1x5r/make-cancer.gov",
+  "assets": [
+    {
+      "name": "doctor-image",
+      "local": "./public/assets/9efddee4-1065-43d2-9546-8cc5f30b44a9.jpg",
+      "origin": "figma"
+    },
+    {
+      "name": "header-nav-chevron",
+      "local": "./public/assets/962da195-e74b-4fae-bff3-f77a311e9f9e.svg",
+      "origin": "figma"
+    },
+    {
+      "name": "sidebar-arrow",
+      "local": "./public/assets/cc105201-f316-48a9-a0ee-d409170f1e15.svg",
+      "origin": "figma"
+    },
+    {
+      "name": "sidebar-arrow-narrow",
+      "local": "./public/assets/5207aa54-ef92-4cb2-87ec-37b9fa50b5c8.svg",
+      "origin": "figma"
+    },
+    {
+      "name": "usa-flag-small",
+      "local": "./public/assets/us_flag_small.png",
+      "origin": "usa-design-system"
+    }
+  ]
+}

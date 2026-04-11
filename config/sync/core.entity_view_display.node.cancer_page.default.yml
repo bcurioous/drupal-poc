@@ -1,0 +1,32 @@
+uuid: c9d0e1f2-a3b4-5678-2345-678901234568
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.cancer_page.body
+    - field.field.node.cancer_page.field_featured_image
+    - field.field.node.cancer_page.field_image_caption
+    - field.field.node.cancer_page.field_posted_date
+    - node.type.cancer_page
+  module:
+    - datetime
+    - image
+    - text
+id: node.cancer_page.default
+targetEntityType: node
+bundle: cancer_page
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  field_featured_image: true
+  field_image_caption: true
+  field_posted_date: true
+  links: true
+  search_api_excerpt: true

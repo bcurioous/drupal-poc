@@ -1,0 +1,232 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e8]:
+        - img "U.S. flag" [ref=e9]
+        - generic [ref=e10]: An Kuldip official website of the United States government
+        - link "Here's how you know" [ref=e11] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - generic [ref=e17]: NIH
+          - generic [ref=e18]: NATIONAL CANCER INSTITUTE
+        - generic [ref=e19]:
+          - textbox "Search" [ref=e20]
+          - button "Search" [ref=e21]
+    - banner [ref=e22]:
+      - navigation [ref=e23]:
+        - navigation "Main Navigation" [ref=e26]:
+          - heading "Main Navigation" [level=2] [ref=e27]
+          - list [ref=e28]:
+            - listitem [ref=e29]:
+              - link "About Cancer" [ref=e30] [cursor=pointer]:
+                - /url: /about-cancer
+            - listitem [ref=e31]:
+              - link "Cancer Types" [ref=e32] [cursor=pointer]:
+                - /url: /cancer-types
+            - listitem [ref=e33]:
+              - link "Research" [ref=e34] [cursor=pointer]:
+                - /url: /research
+            - listitem [ref=e35]:
+              - link "Grants & Training" [ref=e36] [cursor=pointer]:
+                - /url: /grants-training
+            - listitem [ref=e37]:
+              - link "News & Events" [ref=e38] [cursor=pointer]:
+                - /url: /news-events
+            - listitem [ref=e39]:
+              - link "About NCI" [ref=e40] [cursor=pointer]:
+                - /url: /about-nci
+    - main [ref=e41]:
+      - generic [ref=e42]:
+        - complementary [ref=e43]:
+          - generic [ref=e46]:
+            - heading "Breast Cancer" [level=2] [ref=e47]
+            - list [ref=e48]:
+              - listitem [ref=e49]:
+                - link "What is Breast Cancer?" [ref=e50] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e51]:
+                - link "Types of Breast Cancer" [ref=e52] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e53]:
+                - link "Inflammatory Breast Cancer" [ref=e54] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e55]:
+                - link "Triple-Negative Breast Cancer" [ref=e56] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e57]:
+                - link "Ductal Carcinoma in Situ (DCIS)" [ref=e58] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e59]:
+                - link "Paget Disease of the Breast" [ref=e60] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e61]:
+                - link "Causes & Risk Factors" [ref=e62] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e63]:
+                - link "Symptoms" [ref=e64] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e65]:
+                - link "Screening" [ref=e66] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e67]:
+                - link "Diagnosis" [ref=e68] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e69]:
+                - link "Stages" [ref=e70] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e71]:
+                - link "Treatment" [ref=e72] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e73]:
+                - link "Survival Rates & Prognosis" [ref=e74] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e75]:
+                - link "Survivorship & Living with Breast Cancer" [ref=e76] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e77]:
+                - link "Breast Cancer During Pregnancy" [ref=e78] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e79]:
+                - link "Breast Lumps in Children" [ref=e80] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e81]:
+                - link "Breast Cancer in Men" [ref=e82] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e83]:
+                - link "Health Professional" [ref=e84] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e85]:
+                - link "Research Advances" [ref=e86] [cursor=pointer]:
+                  - /url: "#"
+        - generic [ref=e88]:
+          - navigation "Breadcrumb" [ref=e90]:
+            - heading "Breadcrumb" [level=2] [ref=e91]
+            - list [ref=e92]:
+              - listitem [ref=e93]:
+                - link "Home" [ref=e94] [cursor=pointer]:
+                  - /url: /
+          - generic [ref=e96]:
+            - heading "Types of Breast Cancer" [level=1] [ref=e97]
+            - generic [ref=e98]:
+              - generic "Print this page" [ref=e99] [cursor=pointer]: ⎙
+              - generic "Email this page" [ref=e100] [cursor=pointer]: ✉
+          - article [ref=e101]:
+            - generic [ref=e102]:
+              - generic [ref=e103]:
+                - img "Doctor consulting with patient" [ref=e105]
+                - paragraph [ref=e106]: Talk to your doctor to find out what type of breast cancer you have and how it is used to plan the best treatment for you.
+                - paragraph [ref=e107]: "Credit: iStock"
+              - generic [ref=e108]:
+                - paragraph [ref=e109]: There are many types of breast cancer. The types differ based on several factors, such as which cells in the breast become cancer, whether the cancer has spread from where it first formed, and whether the cancer has certain features that affect treatment options.
+                - paragraph [ref=e110]:
+                  - strong [ref=e111]:
+                    - link "Invasive or infiltrating ductal carcinoma" [ref=e112] [cursor=pointer]:
+                      - /url: "#"
+                  - text: begins in the cells that line the
+                  - link "milk ducts" [ref=e113] [cursor=pointer]:
+                    - /url: "#"
+                  - text: and has spread beyond where it first formed. It is the most common breast cancer diagnosis. Learn more about
+                  - link "Breast Cancer" [ref=e114] [cursor=pointer]:
+                    - /url: "#"
+                  - text: .
+                - paragraph [ref=e115]:
+                  - strong [ref=e116]: Invasive lobular carcinoma
+                  - text: begins in the cells that line the breast glands that make milk, called lobules, and has spread beyond where it first formed. It grows more slowly and is less common than invasive ductal carcinoma. Lobular carcinoma is more often found in both breasts than are other types of breast cancer.
+                - paragraph [ref=e117]:
+                  - strong [ref=e118]:
+                    - link "Inflammatory breast cancer" [ref=e119] [cursor=pointer]:
+                      - /url: "#"
+                  - text: is a rare form of breast cancer in which cancer cells block
+                  - link "lymph vessels" [ref=e120] [cursor=pointer]:
+                    - /url: "#"
+                  - text: in the skin of the breast. This type of breast cancer has a high risk of recurrence. It is called inflammatory because the affected breast often looks swollen and red, or inflamed.
+                - paragraph [ref=e121]:
+                  - strong [ref=e122]:
+                    - link "Triple-negative breast cancer" [ref=e123] [cursor=pointer]:
+                      - /url: "#"
+                  - text: is a form of breast cancer in which the cancer cells lack features that are common in breast cancer, including
+                  - link "hormone receptors" [ref=e124] [cursor=pointer]:
+                    - /url: "#"
+                  - text: and a protein called
+                  - link "human epidermal growth factor receptor 2" [ref=e125] [cursor=pointer]:
+                    - /url: "#"
+                  - text: (HER2). This form of breast cancer has a higher risk of recurrence than most other forms of breast cancer.
+                - paragraph [ref=e126]:
+                  - strong [ref=e127]:
+                    - link "Metastatic breast cancer" [ref=e128] [cursor=pointer]:
+                      - /url: "#"
+                  - text: ", also called stage 4 breast cancer, is breast cancer that has spread from the breast to another part of the body. Metastatic spread occurs when breast cancer cells break away from the original tumor and travel through the"
+                  - link "lymph system" [ref=e129] [cursor=pointer]:
+                    - /url: "#"
+                  - text: or blood to other sites in the body.
+                - paragraph [ref=e130]:
+                  - strong [ref=e131]:
+                    - link "Ductal carcinoma in situ (DCIS)" [ref=e132] [cursor=pointer]:
+                      - /url: "#"
+                  - text: forms in the cells that line the milk ducts but has not spread beyond where it first formed. DCIS is not breast cancer but increases the risk of developing breast cancer in the future. Learn more at
+                  - link "Benign and Precancerous Breast Lumps and Conditions" [ref=e133] [cursor=pointer]:
+                    - /url: "#"
+                  - text: .
+                - paragraph [ref=e134]:
+                  - strong [ref=e135]: Lobular carcinoma in situ (LCIS)
+                  - text: forms in the cells that line the breast glands that make milk, called lobules, but has not spread beyond where it first formed. LCIS is not breast cancer but increases the risk of developing breast cancer in the future. Learn more at
+                  - link "Benign and Precancerous Breast Lumps and Conditions" [ref=e136] [cursor=pointer]:
+                    - /url: "#"
+                  - text: .
+                - heading "Molecular subtypes of breast cancer" [level=2] [ref=e137]
+                - paragraph [ref=e138]:
+                  - text: Molecular subtypes of breast cancer are defined by whether they have hormone receptors, HER2 protein, or other
+                  - link "biomarkers" [ref=e139] [cursor=pointer]:
+                    - /url: "#"
+                  - text: . Examples of molecular subtypes of breast cancer include triple-negative, luminal A, luminal B, and HER2-positive. Learn about how these subtypes are diagnosed and how they affect treatment at
+                  - link "Tests for Breast Cancer Biomarkers" [ref=e140] [cursor=pointer]:
+                    - /url: "#"
+                  - text: and
+                  - link "Breast Cancer Treatment by Stage" [ref=e141] [cursor=pointer]:
+                    - /url: "#"
+                  - text: .
+                - separator [ref=e142]
+                - paragraph [ref=e143]:
+                  - text: If you would like to reproduce some or all of this content, see
+                  - link "Reuse of NCI Information" [ref=e144] [cursor=pointer]:
+                    - /url: "#"
+                  - text: for guidance about copyright and permissions. In the case of permitted digital reproduction, please credit the National Cancer Institute as the source and link to the original NCI product using the original product's title; e.g., "Types of Breast Cancer was originally published by the National Cancer Institute."
+              - paragraph [ref=e145]:
+                - strong [ref=e146]: "Posted:"
+                - text: December 2, 2025
+    - contentinfo [ref=e147]:
+      - generic [ref=e152]:
+        - generic [ref=e153]: ⎙
+        - generic [ref=e154]: ✉
+      - generic [ref=e160]:
+        - generic [ref=e161]:
+          - heading "About" [level=3] [ref=e162]
+          - list [ref=e163]:
+            - listitem [ref=e164]: About This Website
+            - listitem [ref=e165]: en Español
+            - listitem [ref=e166]: Reuse & Copyright
+            - listitem [ref=e167]: Social Media
+        - generic [ref=e168]:
+          - heading "Resources" [level=3] [ref=e169]
+          - list [ref=e170]:
+            - listitem [ref=e171]: Contact Us
+            - listitem [ref=e172]: Publications
+            - listitem [ref=e173]: Dictionary of Cancer Terms
+            - listitem [ref=e174]: Find a Clinical Trial
+        - generic [ref=e175]:
+          - heading "Policies" [level=3] [ref=e176]
+          - list [ref=e177]:
+            - listitem [ref=e178]: Accessibility
+            - listitem [ref=e179]: FOIA
+            - listitem [ref=e180]: Privacy & Security
+            - listitem [ref=e181]: Disclaimers
+            - listitem [ref=e182]: Vulnerability Disclosure
+        - generic [ref=e183]:
+          - heading "Sign up for email updates" [level=3] [ref=e184]
+          - generic [ref=e185]: Enter your email address
+          - textbox [ref=e186]
+          - button "Sign up" [ref=e187]
+    - button "BACK TO TOP" [ref=e188] [cursor=pointer]

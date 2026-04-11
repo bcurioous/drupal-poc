@@ -1,0 +1,74 @@
+<?php
+
+/**
+ * @file
+ * NCI theme file.
+ */
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function nci_preprocess_html(&$variables) {
+  // Add custom body classes.
+  $variables['attributes']['class'][] = 'min-h-screen';
+  $variables['attributes']['class'][] = 'bg-white';
+  $variables['attributes']['class'][] = 'font-[Source_Sans_3]';
+  $variables['attributes']['class'][] = 'text-[#1b1b1b]';
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function nci_preprocess_page(&$variables) {
+  // Add Tailwind CDN fonts.
+  $variables['#attached']['html_head'][] = [
+    [
+      '#tag' => 'link',
+      '#attributes' => [
+        'rel' => 'stylesheet',
+        'href' => 'https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Source+Sans+3:ital,wght@0,400;0,700;1,400&display=swap',
+      ],
+    ],
+    'google-fonts',
+  ];
+}
+
+/**
+ * Implements hook_preprocess_region().
+ */
+function nci_preprocess_region(&$variables) {
+  $region = $variables['region'];
+  if ($region === 'header_top') {
+    $variables['attributes']['class'][] = 'border-b';
+    $variables['attributes']['class'][] = 'border-[#dfe1e2]';
+    $variables['attributes']['class'][] = 'bg-white';
+  }
+  if ($region === 'navigation') {
+    $variables['attributes']['class'][] = 'bg-[#1b1b1b]';
+  }
+  if ($region === 'footer_main') {
+    $variables['attributes']['class'][] = 'bg-[#1b1b1b]';
+    $variables['attributes']['class'][] = 'text-white';
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function nci_preprocess_block(&$variables) {
+  $block = $variables['base_plugin_id'];
+  
+  // Add custom styling based on block type.
+  switch ($block) {
+    case 'system_menu_block':
+      if (isset($variables['elements']['#derivative_plugin_id'])) {
+        $menu_name = $variables['elements']['#derivative_plugin_id'];
+        if ($menu_name === 'main') {
+          $variables['attributes']['class'][] = 'flex';
+          $variables['attributes']['class'][] = 'text-[16px]';
+          $variables['attributes']['class'][] = 'text-white';
+        }
+      }
+      break;
+  }
+}

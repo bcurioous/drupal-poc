@@ -1,0 +1,88 @@
+uuid: b8c9d0e1-f2a3-4567-1234-567890123457
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.cancer_page.body
+    - field.field.node.cancer_page.field_featured_image
+    - field.field.node.cancer_page.field_image_caption
+    - field.field.node.cancer_page.field_posted_date
+    - node.type.cancer_page
+  module:
+    - datetime
+    - image
+    - text
+id: node.cancer_page.default
+targetEntityType: node
+bundle: cancer_page
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 10
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: true
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_featured_image:
+    type: image_image
+    weight: 5
+    region: content
+    settings:
+      preview_image_style: medium
+      file_directory: images/featured
+      file_extensions: 'png gif jpg jpeg webp'
+    third_party_settings: {  }
+  field_image_caption:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_posted_date:
+    type: datetime_default
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  path: true
+  promote: true
+  sticky: true
+  url_redirects: true

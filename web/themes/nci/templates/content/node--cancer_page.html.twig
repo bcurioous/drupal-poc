@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * Theme override to display a cancer_page node.
+ *
+ * Custom layout matching NCI reference HTML:
+ * - Featured image floated right with caption and credit
+ * - Print/email icons next to title
+ * - Posted date after body content
+ */
+#}
+<article{{ attributes.addClass('node', 'node--type-cancer_page', 'node--view-mode-full') }}>
+
+  {# Title is rendered by page title block, not here #}
+  {{ title_prefix }}
+
+  <div{{ content_attributes.addClass('node__content') }}>
+
+    {# Featured Image - floated right with caption and credit #}
+    {% if content.field_featured_image|render %}
+      <div class="float-right mb-4 ml-6 w-[280px]">
+        {{ content.field_featured_image }}
+        {% if content.field_image_caption|render %}
+          <p class="mt-2 text-[14px] leading-[1.4] text-[#565c65]">
+            {{ node.field_image_caption.value }}
+          </p>
+        {% endif %}
+        <p class="mt-1 text-[12px] text-[#565c65]">Credit: iStock</p>
+      </div>
+    {% endif %}
+
+    {# Body Content - includes h2, paragraphs, hr, copyright #}
+    {{ content.body }}
+
+    {# Posted Date - AFTER body content #}
+    {% if content.field_posted_date|render %}
+      <p class="mb-2 mt-6">
+        <strong>Posted:</strong> {{ node.field_posted_date.value|date('F j, Y') }}
+      </p>
+    {% endif %}
+
+  </div>
+
+  {{ title_suffix }}
+</article>

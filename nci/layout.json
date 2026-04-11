@@ -1,0 +1,552 @@
+{
+  "meta": {
+    "sourceFile": "index.html",
+    "description": "NCI Cancer.gov page layout - Types of Breast Cancer",
+    "reversible": true,
+    "version": "1.0"
+  },
+  "layout": [
+    {
+      "id": "government-banner",
+      "type": "government-banner",
+      "tag": "div",
+      "attrs": { "class": "bg-[#f0f0f0]" },
+      "container": {
+        "tag": "div",
+        "attrs": { "class": "mx-auto flex max-w-[1200px] items-center gap-2 px-4 py-1 text-[13px]" },
+        "children": [
+          {
+            "tag": "img",
+            "attrs": { "src": "./public/assets/us_flag_small.png", "alt": "U.S. flag", "class": "h-[11px] w-4" }
+          },
+          {
+            "tag": "span",
+            "text": "An official website of the United States government"
+          },
+          {
+            "tag": "a",
+            "attrs": { "href": "#", "class": "ml-1 text-[#005ea2] underline" },
+            "text": "Here's how you know"
+          }
+        ]
+      }
+    },
+    {
+      "id": "header",
+      "type": "header",
+      "tag": "header",
+      "children": [
+        {
+          "id": "header-top-bar",
+          "type": "header-top-bar",
+          "tag": "div",
+          "attrs": { "class": "border-b border-[#dfe1e2] bg-white" },
+          "container": {
+            "tag": "div",
+            "attrs": { "class": "mx-auto flex max-w-[1200px] items-center justify-between px-4 py-4" },
+            "children": [
+              {
+                "id": "logo-group",
+                "type": "logo-group",
+                "tag": "div",
+                "attrs": { "class": "flex items-center gap-3" },
+                "children": [
+                  {
+                    "tag": "div",
+                    "attrs": { "class": "flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#005ea2] font-[Merriweather] text-[11px] font-bold text-white" },
+                    "text": "NIH"
+                  },
+                  {
+                    "tag": "span",
+                    "attrs": { "class": "font-[Merriweather] text-[22px] font-bold tracking-[0.55px] text-[#b51d09]" },
+                    "text": "NATIONAL CANCER INSTITUTE"
+                  }
+                ]
+              },
+              {
+                "id": "search-group",
+                "type": "search-group",
+                "tag": "div",
+                "attrs": { "class": "flex items-center" },
+                "children": [
+                  {
+                    "tag": "input",
+                    "attrs": { "class": "h-[40px] w-[200px] border border-[#565c65] px-3 text-[16px]" }
+                  },
+                  {
+                    "tag": "button",
+                    "attrs": { "class": "h-[40px] bg-[#d83933] px-5 text-[16px] font-bold text-white" },
+                    "text": "Search"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "main-navigation",
+          "type": "navigation",
+          "tag": "nav",
+          "attrs": { "class": "bg-[#1b1b1b]" },
+          "container": {
+            "tag": "div",
+            "attrs": { "class": "mx-auto max-w-[1200px] px-4" },
+            "children": [
+              {
+                "id": "nav-list",
+                "type": "nav-list",
+                "tag": "ul",
+                "attrs": { "class": "flex text-[16px] text-white" },
+                "repeatable": true,
+                "items": [
+                  { "text": "About Cancer", "href": "#", "bold": false, "hasIcon": true, "icon": "chevron" },
+                  { "text": "Cancer Types", "href": "#", "bold": true, "hasIcon": true, "icon": "chevron" },
+                  { "text": "Research", "href": "#", "bold": false, "hasIcon": true, "icon": "chevron" },
+                  { "text": "Grants & Training", "href": "#", "bold": false, "hasIcon": true, "icon": "chevron" },
+                  { "text": "News & Events", "href": "#", "bold": false, "hasIcon": true, "icon": "chevron" },
+                  { "text": "About NCI", "href": "#", "bold": false, "hasIcon": true, "icon": "chevron" }
+                ],
+                "itemTemplate": {
+                  "tag": "li",
+                  "attrs": { "class": "flex items-center gap-1 px-4 py-3{{#if bold}} font-bold{{/if}}" },
+                  "children": [
+                    { "tag": "a", "attrs": { "href": "{{href}}", "class": "flex items-center gap-1" }, "text": "{{text}}" },
+                    { "tag": "img", "attrs": { "src": "./public/assets/962da195-e74b-4fae-bff3-f77a311e9f9e.svg", "class": "h-3 w-3", "alt": "" }, "conditional": "{{#if hasIcon}}" }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "main-content",
+      "type": "main",
+      "tag": "main",
+      "attrs": { "class": "mx-auto max-w-[1200px] px-4 py-6" },
+      "children": [
+        {
+          "id": "content-wrapper",
+          "type": "content-wrapper",
+          "tag": "div",
+          "attrs": { "class": "flex gap-8" },
+          "children": [
+            {
+              "id": "sidebar",
+              "type": "sidebar",
+              "tag": "aside",
+              "attrs": { "class": "w-[250px] shrink-0" },
+              "children": [
+                {
+                  "id": "sidebar-title",
+                  "tag": "h2",
+                  "attrs": { "class": "mb-0 border-b-2 border-[#005ea2] pb-2 text-[20px] font-bold text-[#005ea2]" },
+                  "text": "Breast Cancer"
+                },
+                {
+                  "id": "sidebar-nav",
+                  "type": "sidebar-nav",
+                  "tag": "ul",
+                  "attrs": { "class": "text-[16px] text-[#565c65]" },
+                  "repeatable": true,
+                  "items": [
+                    { "text": "What is Breast Cancer?", "href": "#", "indent": false, "bold": false, "hasIcon": false, "active": false },
+                    { "text": "Types of Breast Cancer", "href": "#", "indent": false, "bold": true, "hasIcon": false, "active": true, "activeAttrs": "border-l-4 border-[#005ea2]" },
+                    { "text": "Inflammatory Breast Cancer", "href": "#", "indent": true, "bold": false, "hasIcon": false },
+                    { "text": "Triple-Negative Breast Cancer", "href": "#", "indent": true, "bold": false, "hasIcon": false },
+                    { "text": "Ductal Carcinoma in Situ (DCIS)", "href": "#", "indent": true, "bold": false, "hasIcon": false },
+                    { "text": "Paget Disease of the Breast", "href": "#", "indent": true, "bold": false, "hasIcon": false },
+                    { "text": "Causes & Risk Factors", "href": "#", "indent": false, "bold": false, "hasIcon": true, "hasTextIcon": false },
+                    { "text": "Symptoms", "href": "#", "indent": false, "bold": false, "hasIcon": false },
+                    { "text": "Screening", "href": "#", "indent": false, "bold": false, "hasIcon": true },
+                    { "text": "Diagnosis", "href": "#", "indent": false, "bold": false, "hasIcon": true },
+                    { "text": "Stages", "href": "#", "indent": false, "bold": false, "hasIcon": true },
+                    { "text": "Treatment", "href": "#", "indent": false, "bold": false, "hasIcon": true },
+                    { "text": "Survival Rates & Prognosis", "href": "#", "indent": false, "bold": false, "hasIcon": false },
+                    { "text": "Survivorship & Living with Breast Cancer", "href": "#", "indent": false, "bold": false, "hasIcon": true, "hasTextIcon": true, "textIcon": "5207aa54-ef92-4cb2-87ec-37b9fa50b5c8.svg" },
+                    { "text": "Breast Cancer During Pregnancy", "href": "#", "indent": false, "bold": false, "hasIcon": false },
+                    { "text": "Breast Lumps in Children", "href": "#", "indent": false, "bold": false, "hasIcon": false },
+                    { "text": "Breast Cancer in Men", "href": "#", "indent": false, "bold": false, "hasIcon": false },
+                    { "text": "Health Professional", "href": "#", "indent": false, "bold": false, "hasIcon": true },
+                    { "text": "Research Advances", "href": "#", "indent": false, "bold": false, "hasIcon": true }
+                  ],
+                  "itemTemplate": {
+                    "tag": "li",
+                    "attrs": { "class": "border-b border-[#dfe1e2]{{#if active}} border-l-4 border-[#005ea2]{{/if}}" },
+                    "childTemplate": {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "{{href}}",
+                        "class": "flex items-center{{#if indent}} pl-6 pr-3{{else}} px-3{{/if}} py-2{{#if bold}} font-bold{{/if}}{{#if active}} text-[#005ea2]{{/if}}"
+                      },
+                      "text": "{{text}}",
+                      "iconSuffix": { "tag": "img", "attrs": { "src": "./public/assets/cc105201-f316-48a9-a0ee-d409170f1e15.svg", "class": "h-4 w-4", "alt": "" }, "conditional": "{{#if hasIcon}}" },
+                      "textIconSuffix": { "tag": "img", "attrs": { "src": "./public/assets/5207aa54-ef92-4cb2-87ec-37b9fa50b5c8.svg", "class": "h-4 w-[12.7188px]", "alt": "" }, "conditional": "{{#if hasTextIcon}}" }
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "main-section",
+              "type": "main-section",
+              "tag": "section",
+              "attrs": { "class": "min-w-0 flex-1 text-[16px] leading-[1.6]" },
+              "children": [
+                {
+                  "id": "breadcrumb",
+                  "type": "breadcrumb",
+                  "tag": "div",
+                  "attrs": { "class": "mb-4 flex flex-wrap items-center gap-2 text-[14px] text-[#565c65]" },
+                  "repeatable": true,
+                  "items": [
+                    { "text": "Home", "href": "#", "type": "link" },
+                    { "text": ">", "type": "separator" },
+                    { "text": "Cancer Types", "href": "#", "type": "link" },
+                    { "text": ">", "type": "separator" },
+                    { "text": "Breast Cancer", "href": "#", "type": "link" },
+                    { "text": ">", "type": "separator" },
+                    { "text": "Types of Breast Cancer", "type": "current" }
+                  ],
+                  "itemTemplate": {
+                    "tag": "{{#if isLink}}a{{else}}span{{/if}}",
+                    "attrs": { "href": "{{#if href}}{{href}}{{/if}}", "class": "{{#if isLink}}text-[#005ea2]{{else}}text-[#1b1b1b]{{/if}}" },
+                    "text": "{{text}}"
+                  }
+                },
+                {
+                  "id": "page-header",
+                  "type": "page-header",
+                  "tag": "div",
+                  "attrs": { "class": "mb-6 flex items-start justify-between" },
+                  "children": [
+                    {
+                      "tag": "h1",
+                      "attrs": { "class": "m-0 font-[Merriweather] text-[36px] font-bold text-[#1b1b1b]" },
+                      "text": "Types of Breast Cancer"
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": { "class": "flex shrink-0 gap-3 pt-2 text-[#565c65]" },
+                      "children": [
+                        { "tag": "span", "attrs": { "class": "text-[20px]" }, "text": "⎙" },
+                        { "tag": "span", "attrs": { "class": "text-[20px]" }, "text": "✉" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "featured-image",
+                  "type": "featured-image",
+                  "tag": "div",
+                  "attrs": { "class": "float-right mb-4 ml-6 w-[280px]" },
+                  "children": [
+                    {
+                      "tag": "img",
+                      "attrs": { "src": "./public/assets/9efddee4-1065-43d2-9546-8cc5f30b44a9.jpg", "alt": "Doctor consulting with patient", "class": "w-full h-auto" }
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": { "class": "mt-2 text-[14px] leading-[1.4] text-[#565c65]" },
+                      "text": "Talk to your doctor to find out what type of breast cancer you have and how it is used to plan the best treatment for you."
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": { "class": "mt-1 text-[12px] text-[#565c65]" },
+                      "text": "Credit: iStock"
+                    }
+                  ]
+                },
+                {
+                  "id": "content-paragraphs",
+                  "type": "content-paragraphs",
+                  "tag": "div",
+                  "children": [
+                    {
+                      "id": "intro-paragraph",
+                      "tag": "p",
+                      "attrs": { "class": "mb-4" },
+                      "text": "There are many types of breast cancer. The types differ based on several factors, such as which cells in the breast become cancer, whether the cancer has spread from where it first formed, and whether the cancer has certain features that affect treatment options."
+                    },
+                    {
+                      "id": "cancer-types-list",
+                      "type": "cancer-types-list",
+                      "tag": "div",
+                      "repeatable": true,
+                      "items": [
+                        {
+                          "tag": "p",
+                          "attrs": { "class": "mb-4" },
+                          "content": {
+                            "type": "rich-text",
+                            "parts": [
+                              { "bold": true, "links": [{ "text": "Invasive or infiltrating ductal carcinoma", "href": "#" }] },
+                              { "text": " begins in the cells that line the " },
+                              { "links": [{ "text": "milk ducts", "href": "#" }] },
+                              { "text": " and has spread beyond where it first formed. It is the most common breast cancer diagnosis. Learn more about " },
+                              { "links": [{ "text": "Breast Cancer", "href": "#" }] },
+                              { "text": "." }
+                            ]
+                          }
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": { "class": "mb-4" },
+                          "content": {
+                            "type": "rich-text",
+                            "parts": [
+                              { "bold": true, "text": "Invasive lobular carcinoma" },
+                              { "text": " begins in the cells that line the breast glands that make milk, called lobules, and has spread beyond where it first formed. It grows more slowly and is less common than invasive ductal carcinoma. Lobular carcinoma is more often found in both breasts than are other types of breast cancer." }
+                            ]
+                          }
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": { "class": "mb-4" },
+                          "content": {
+                            "type": "rich-text",
+                            "parts": [
+                              { "bold": true, "links": [{ "text": "Inflammatory breast cancer", "href": "#" }] },
+                              { "text": " is a rare form of breast cancer in which cancer cells block " },
+                              { "links": [{ "text": "lymph vessels", "href": "#" }] },
+                              { "text": " in the skin of the breast. This type of breast cancer has a high risk of recurrence. It is called inflammatory because the affected breast often looks swollen and red, or inflamed." }
+                            ]
+                          }
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": { "class": "mb-4" },
+                          "content": {
+                            "type": "rich-text",
+                            "parts": [
+                              { "bold": true, "links": [{ "text": "Triple-negative breast cancer", "href": "#" }] },
+                              { "text": " is a form of breast cancer in which the cancer cells lack features that are common in breast cancer, including " },
+                              { "links": [{ "text": "hormone receptors", "href": "#" }] },
+                              { "text": " and a protein called " },
+                              { "links": [{ "text": "human epidermal growth factor receptor 2", "href": "#" }] },
+                              { "text": " (HER2). This form of breast cancer has a higher risk of recurrence than most other forms of breast cancer." }
+                            ]
+                          }
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": { "class": "mb-4" },
+                          "content": {
+                            "type": "rich-text",
+                            "parts": [
+                              { "bold": true, "links": [{ "text": "Metastatic breast cancer", "href": "#" }] },
+                              { "text": ", also called stage 4 breast cancer, is breast cancer that has spread from the breast to another part of the body. Metastatic spread occurs when breast cancer cells break away from the original tumor and travel through the " },
+                              { "links": [{ "text": "lymph system", "href": "#" }] },
+                              { "text": " or blood to other sites in the body." }
+                            ]
+                          }
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": { "class": "mb-4" },
+                          "content": {
+                            "type": "rich-text",
+                            "parts": [
+                              { "bold": true, "links": [{ "text": "Ductal carcinoma in situ (DCIS)", "href": "#" }] },
+                              { "text": " forms in the cells that line the milk ducts but has not spread beyond where it first formed. DCIS is not breast cancer but increases the risk of developing breast cancer in the future. Learn more at " },
+                              { "links": [{ "text": "Benign and Precancerous Breast Lumps and Conditions", "href": "#" }] },
+                              { "text": "." }
+                            ]
+                          }
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": { "class": "mb-4" },
+                          "content": {
+                            "type": "rich-text",
+                            "parts": [
+                              { "bold": true, "text": "Lobular carcinoma in situ (LCIS)" },
+                              { "text": " forms in the cells that line the breast glands that make milk, called lobules, but has not spread beyond where it first formed. LCIS is not breast cancer but increases the risk of developing breast cancer in the future. Learn more at " },
+                              { "links": [{ "text": "Benign and Precancerous Breast Lumps and Conditions", "href": "#" }] },
+                              { "text": "." }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "subheading",
+                      "tag": "h2",
+                      "attrs": { "class": "mb-4 mt-8 font-[Merriweather] text-[28px] font-bold text-[#1b1b1b]" },
+                      "text": "Molecular subtypes of breast cancer"
+                    },
+                    {
+                      "tag": "p",
+                      "attrs": { "class": "mb-4" },
+                      "content": {
+                        "type": "rich-text",
+                        "parts": [
+                          { "text": "Molecular subtypes of breast cancer are defined by whether they have hormone receptors, HER2 protein, or other " },
+                          { "links": [{ "text": "biomarkers", "href": "#" }] },
+                          { "text": ". Examples of molecular subtypes of breast cancer include triple-negative, luminal A, luminal B, and HER2-positive. Learn about how these subtypes are diagnosed and how they affect treatment at " },
+                          { "links": [{ "text": "Tests for Breast Cancer Biomarkers", "href": "#" }] },
+                          { "text": " and " },
+                          { "links": [{ "text": "Breast Cancer Treatment by Stage", "href": "#" }] },
+                          { "text": "." }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "posted-date",
+                      "tag": "p",
+                      "attrs": { "class": "mb-2 mt-6" },
+                      "content": {
+                        "type": "mixed",
+                        "parts": [
+                          { "bold": true, "text": "Posted: " },
+                          { "text": "December 2, 2025" }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "divider",
+                      "tag": "hr",
+                      "attrs": { "class": "my-6 border-t border-[#dfe1e2]" }
+                    },
+                    {
+                      "id": "copyright-notice",
+                      "tag": "p",
+                      "attrs": { "class": "text-[14px] italic leading-[1.5] text-[#565c65]" },
+                      "content": {
+                        "type": "rich-text",
+                        "parts": [
+                          { "text": "If you would like to reproduce some or all of this content, see " },
+                          { "links": [{ "text": "Reuse of NCI Information", "href": "#" }] },
+                          { "text": " for guidance about copyright and permissions. In the case of permitted digital reproduction, please credit the National Cancer Institute as the source and link to the original NCI product using the original product's title; e.g., \"Types of Breast Cancer was originally published by the National Cancer Institute.\"" }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "footer",
+      "type": "footer",
+      "tag": "footer",
+      "children": [
+        {
+          "id": "footer-top",
+          "type": "footer-top",
+          "tag": "div",
+          "attrs": { "class": "mx-auto max-w-[1200px] border-t border-[#dfe1e2] px-4 py-4" },
+          "child": {
+            "tag": "div",
+            "attrs": { "class": "flex gap-3 text-[#565c65]" },
+            "children": [
+              { "tag": "span", "attrs": { "class": "text-[20px]" }, "text": "⎙" },
+              { "tag": "span", "attrs": { "class": "text-[20px]" }, "text": "✉" }
+            ]
+          }
+        },
+        {
+          "id": "footer-main",
+          "type": "footer-main",
+          "tag": "div",
+          "attrs": { "class": "bg-[#1b1b1b] text-white" },
+          "container": {
+            "tag": "div",
+            "attrs": { "class": "mx-auto max-w-[1200px] px-4 py-10" },
+            "child": {
+              "id": "footer-grid",
+              "type": "footer-grid",
+              "tag": "div",
+              "attrs": { "class": "grid grid-cols-1 gap-8 md:grid-cols-4" },
+              "repeatable": false,
+              "columns": [
+                {
+                  "id": "footer-about",
+                  "type": "footer-column",
+                  "tag": "div",
+                  "title": "About",
+                  "items": ["About This Website", "en Español", "Reuse & Copyright", "Social Media"]
+                },
+                {
+                  "id": "footer-resources",
+                  "type": "footer-column",
+                  "tag": "div",
+                  "title": "Resources",
+                  "items": ["Contact Us", "Publications", "Dictionary of Cancer Terms", "Find a Clinical Trial"]
+                },
+                {
+                  "id": "footer-policies",
+                  "type": "footer-column",
+                  "tag": "div",
+                  "title": "Policies",
+                  "items": ["Accessibility", "FOIA", "Privacy & Security", "Disclaimers", "Vulnerability Disclosure"]
+                },
+                {
+                  "id": "footer-signup",
+                  "type": "footer-signup",
+                  "tag": "div",
+                  "title": "Sign up for email updates",
+                  "form": {
+                    "label": "Enter your email address",
+                    "inputType": "email",
+                    "placeholder": "",
+                    "buttonText": "Sign up"
+                  }
+                }
+              ],
+              "columnTemplate": {
+                "tag": "div",
+                "titleTag": "h3",
+                "titleAttrs": { "class": "mb-3 text-[16px] font-bold" },
+                "listTag": "ul",
+                "listAttrs": { "class": "space-y-2 text-[16px]" },
+                "itemTag": "li",
+                "signupForm": {
+                  "inputWrapperAttrs": { "class": "mb-3 h-[40px] w-full border border-white bg-transparent px-3 text-[16px] text-white" },
+                  "buttonAttrs": { "class": "border-none bg-[#e5a000] px-5 py-2 text-[16px] font-bold text-[#1b1b1b]" }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "back-to-top",
+      "type": "back-to-top-button",
+      "tag": "button",
+      "attrs": {
+        "onclick": "window.scrollTo({ top: 0, behavior: 'smooth' })",
+        "class": "fixed bottom-4 right-4 z-50 cursor-pointer bg-[#005ea2] px-3 py-2 text-[12px] font-bold text-white hover:bg-[#1a4480]"
+      },
+      "text": "BACK TO TOP"
+    }
+  ],
+  "symbols": {
+    "navChevronIcon": "./public/assets/962da195-e74b-4fae-bff3-f77a311e9f9e.svg",
+    "sidebarArrowIcon": "./public/assets/cc105201-f316-48a9-a0ee-d409170f1e15.svg",
+    "sidebarSpecialIcon": "./public/assets/5207aa54-ef92-4cb2-87ec-37b9fa50b5c8.svg",
+    "usFlag": "./public/assets/us_flag_small.png",
+    "featuredImage": "./public/assets/9efddee4-1065-43d2-9546-8cc5f30b44a9.jpg"
+  },
+  "styles": {
+    "fonts": {
+      "heading": "Merriweather",
+      "body": "Source Sans 3"
+    },
+    "colors": {
+      "primary": "#005ea2",
+      "secondary": "#565c65",
+      "dark": "#1b1b1b",
+      "danger": "#d83933",
+      "warning": "#e5a000",
+      "alert": "#b51d09",
+      "light": "#f0f0f0",
+      "border": "#dfe1e2"
+    }
+  }
+}
