@@ -1,0 +1,162 @@
+# =============================================================================
+# Drupal Git Ignore - Standard Drupal Project
+# =============================================================================
+
+# Drupal scaffold files - DO track these
+!.gitignore
+!.editorconfig
+!.ht.router.php
+!.htaccess
+web/.htaccess
+web/robots.txt
+web/sites/default/default.services.yml
+web/sites/default/default.settings.php
+web/sites/development.services.yml
+web/sites/example.settings.php
+web/sites/example.sites.php
+web/update.php
+web/web.config
+
+# =============================================================================
+# Composer
+# =============================================================================
+# Dependencies installed by Composer
+/vendor/
+/composer.lock
+
+# Dev dependencies (if using development tools)
+# /drush/contrib/
+# /drush/drush
+/vendor/drush/drush
+
+# =============================================================================
+# Drupal directories that should not be tracked
+# =============================================================================
+
+# User uploads and site files - CRITICAL not to commit
+/web/sites/default/files/
+/web/sites/*/files/
+/web/sites/*/private/
+
+# Drush cache and commands
+/drush/cache/
+/drush/Commands/contrib/
+
+# Private files directory (if configured)
+/private/
+
+# =============================================================================
+# Local development environments
+# =============================================================================
+/.ddev/
+/.docker/
+/.dockerignore
+.env
+.env.*
+*.local
+Vagrantfile
+vagrant/
+
+# =============================================================================
+# Generated files
+# =============================================================================
+*.sql
+*.gz
+*.tar
+*.tar.gz
+*.zip
+
+# Database dumps
+*.sql
+*dump*.sql
+
+# Log files
+*.log
+/logs/
+/web/sites/default/logs/
+
+# =============================================================================
+# macOS
+# =============================================================================
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._.*
+
+# =============================================================================
+# IDE and Editor
+# =============================================================================
+/.idea/
+/.vcode/
+*.sublime-*
+*.swp
+*.swo
+*~
+\#*\#
+/nbproject/
+/cmake-build-*/
+/*.komodoproject
+
+# =============================================================================
+# Temporary files
+# =============================================================================
+/tmp/
+/temp/
+*.tmp
+*.bak
+*.swp
+*~
+
+# =============================================================================
+# Testing
+# =============================================================================
+/web/sites/simpletest/
+/phpunit.xml
+/.phpunit.result.cache
+/.php-cs-fixer.cache
+/behat.yml
+/.kahносится
+
+# =============================================================================
+# GitHub Actions / CI
+# =============================================================================
+/.github/
+/.gitee/
+/gitlab-ci.yml
+
+# =============================================================================
+# Node.js (if using asset compilation)
+# =============================================================================
+/node_modules/
+/web/libraries/*!/web/libraries/.gitkeep
+/npm-debug.log*
+/yarn-error.log
+
+# =============================================================================
+# SASS / CSS compilation cache
+# =============================================================================
+/.sass-cache/
+*.css.map
+
+# =============================================================================
+# Drupal specific
+# =============================================================================
+# Settings files (usually auto-generated, don't commit secrets)
+/web/sites/*/settings.php
+/web/sites/*/settings.local.php
+
+# PHP errors
+/PHPErrors.log
+
+# Drush make files
+/*.make
+/build-
+
+# Modules that should be excluded (if needed)
+/web/modules/baz/
+
+# Theme development
+/web/themes/*/dist/
+/web/themes/*/node_modules/
+/web/themes/*/.sass-cache/
