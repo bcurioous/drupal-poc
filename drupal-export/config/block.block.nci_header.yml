@@ -1,0 +1,23 @@
+uuid: ee3b1bd7-3313-417a-8445-06dafc22aab8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f16e39e8-db3a-4ee6-8bc5-4a781eb48615'
+  module:
+    - block_content
+  theme:
+    - nci
+id: nci_header
+theme: nci
+region: header_top
+weight: 1
+provider: null
+plugin: 'block_content:f16e39e8-db3a-4ee6-8bc5-4a781eb48615'
+settings:
+  id: 'block_content:f16e39e8-db3a-4ee6-8bc5-4a781eb48615'
+  label: 'NCI Header'
+  label_display: ''
+  provider: block_content
+  view_mode: full
+visibility: {  }

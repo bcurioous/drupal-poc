@@ -1,0 +1,20 @@
+uuid: 1e92e68c-0d15-474b-ac84-cdb4194aca92
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nci
+id: nci_breadcrumb
+theme: nci
+region: content
+weight: -100
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumb
+  label_display: ''
+  provider: system
+visibility: {  }

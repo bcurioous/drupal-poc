@@ -1,0 +1,37 @@
+uuid: c3d4e5f6-a7b8-9012-cdef-012345678902
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured_image
+    - node.type.cancer_page
+  module:
+    - image
+id: node.cancer_page.field_featured_image
+field_name: field_featured_image
+entity_type: node
+bundle: cancer_page
+label: 'Featured Image'
+description: 'Main featured image for the page'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+  file_directory: images/featured
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: null
+    alt: ''
+    width: null
+    height: null
+field_type: image

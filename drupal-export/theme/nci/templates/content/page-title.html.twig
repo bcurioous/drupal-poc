@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Theme override for page titles.
+ *
+ * Adds print/email icons next to the title.
+ */
+#}
+<div class="mb-6 flex items-start justify-between">
+  {{ title_prefix }}
+  {% if title %}
+    <h1{{ title_attributes.addClass('m-0', 'font-[Merriweather]', 'text-[36px]', 'font-bold', 'text-[#1b1b1b]') }}>{{ title }}</h1>
+  {% endif %}
+  {{ title_suffix }}
+  <div class="flex shrink-0 gap-3 pt-2 text-[#565c65]">
+    <span class="text-[20px] cursor-pointer" title="Print this page">⎙</span>
+    <span class="text-[20px] cursor-pointer" title="Email this page">✉</span>
+  </div>
+</div>

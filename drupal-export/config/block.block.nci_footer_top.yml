@@ -1,0 +1,23 @@
+uuid: 347c740c-130b-494d-82a0-c6daf755cef7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2efbe7e1-7199-461e-a5d0-0953c75b760b'
+  module:
+    - block_content
+  theme:
+    - nci
+id: nci_footer_top
+theme: nci
+region: footer_top
+weight: 0
+provider: null
+plugin: 'block_content:2efbe7e1-7199-461e-a5d0-0953c75b760b'
+settings:
+  id: 'block_content:2efbe7e1-7199-461e-a5d0-0953c75b760b'
+  label: ''
+  label_display: ''
+  provider: block_content
+  view_mode: full
+visibility: {  }

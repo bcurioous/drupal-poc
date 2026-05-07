@@ -1,0 +1,21 @@
+uuid: a7b8c9d0-e1f2-3456-0123-456789012346
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_posted_date
+    - node.type.cancer_page
+  module:
+    - datetime
+id: node.cancer_page.field_posted_date
+field_name: field_posted_date
+entity_type: node
+bundle: cancer_page
+label: 'Posted Date'
+description: 'Date when the content was posted'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

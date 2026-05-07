@@ -1,0 +1,74 @@
+{#
+/**
+ * @file
+ * Theme override for the basic structure of a single Drupal page.
+ *
+ * Tailwind CSS CDN is loaded here for NCI styling.
+ */
+#}
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Source+Sans+3:ital,wght@0,400;0,700;1,400&display=swap" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-nci-primary: #005ea2;
+        --color-nci-secondary: #565c65;
+        --color-nci-dark: #1b1b1b;
+        --color-nci-danger: #d83933;
+        --color-nci-warning: #e5a000;
+        --color-nci-alert: #b51d09;
+        --color-nci-light: #f0f0f0;
+        --color-nci-border: #dfe1e2;
+      }
+      /* NCI Navigation Menu Styling */
+      #block-nci-main-menu > ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      #block-nci-main-menu ul li {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        padding: 0.75rem 1rem;
+      }
+      #block-nci-main-menu ul li a {
+        color: white;
+        text-decoration: none;
+      }
+      /* Chevron icon for menu items */
+      #block-nci-main-menu ul li a::after {
+        content: '';
+        display: inline-block;
+        width: 0.75rem;
+        height: 0.75rem;
+        margin-left: 0.25rem;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 4.5L6 7.5L9 4.5'/%3E%3C/svg%3E");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      /* Make Cancer Types bold */
+      #block-nci-main-menu ul li:nth-child(2) a {
+        font-weight: 700;
+      }
+    </style>
+    <head-placeholder token="{{ placeholder_token }}">
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+  </head>
+  <body{{ attributes.addClass('min-h-screen', 'bg-white', 'font-[Source_Sans_3]', 'text-[#1b1b1b]') }}>
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      {{ 'Skip to main content'|t }}
+    </a>
+    {{ page_top }}
+    {{ page }}
+    {{ page_bottom }}
+    <js-bottom-placeholder token="{{ placeholder_token }}">
+  </body>
+</html>

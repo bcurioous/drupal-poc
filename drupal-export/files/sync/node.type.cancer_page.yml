@@ -1,0 +1,11 @@
+uuid: 8c1e3184-4b69-4cd5-8be7-a40367f3d571
+langcode: en
+status: true
+dependencies: {  }
+name: 'Cancer Page'
+type: cancer_page
+description: 'Content type for NCI Cancer.gov pages'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

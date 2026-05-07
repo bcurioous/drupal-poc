@@ -1,0 +1,70 @@
+{#
+/**
+ * @file
+ * Theme override for the main page template.
+ *
+ * NCI Cancer.gov page layout with Tailwind CSS CDN.
+ */
+#}
+
+{# Government Banner - rendered via region #}
+{{ page.header_top }}
+
+<header>
+  {# Navigation #}
+  {% if page.navigation %}
+    <nav class="bg-[#1b1b1b]">
+      <div class="mx-auto max-w-[1200px] px-4">
+        {{ page.navigation }}
+      </div>
+    </nav>
+  {% endif %}
+</header>
+
+{# Main Content #}
+<main class="mx-auto max-w-[1200px] px-4 py-6">
+  <div class="flex gap-8">
+    {# Sidebar #}
+    {% if page.sidebar %}
+      <aside class="w-[250px] shrink-0">
+        {{ page.sidebar }}
+      </aside>
+    {% endif %}
+
+    {# Main Content Area #}
+    <section class="min-w-0 flex-1 text-[16px] leading-[1.6]">
+      {% if page.content %}
+        {{ page.content }}
+      {% endif %}
+    </section>
+  </div>
+</main>
+
+{# Footer #}
+<footer>
+  {% if page.footer_top %}
+    <div class="mx-auto max-w-[1200px] border-t border-[#dfe1e2] px-4 py-4">
+      {{ page.footer_top }}
+    </div>
+  {% endif %}
+
+  {% if page.footer_main %}
+    <div class="bg-[#1b1b1b] text-white">
+      <div class="mx-auto max-w-[1200px] px-4 py-10">
+        {{ page.footer_main }}
+      </div>
+    </div>
+  {% endif %}
+</footer>
+
+{# Back to Top Button #}
+{% if page.back_to_top %}
+  {{ page.back_to_top }}
+{% else %}
+  <button
+    onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    class="fixed bottom-4 right-4 z-50 cursor-pointer bg-[#005ea2] px-3 py-2 text-[12px] font-bold text-white hover:bg-[#1a4480]"
+  >
+    BACK TO TOP
+  </button>
+{% endif %}

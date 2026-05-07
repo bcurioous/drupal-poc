@@ -1,0 +1,30 @@
+name: NCI Theme
+type: theme
+description: NCI Cancer.gov theme with Tailwind CSS CDN
+core_version_requirement: ^10 || ^11
+base theme: stable9
+libraries:
+  - nci/global
+  - nci/tailwind
+libraries-extend:
+  core/drupal.dropbutton:
+    - nci/dropbutton
+  core/drupal.dialog:
+    - nci/dialog
+  file/drupal.file:
+    - nci/file
+  core/drupal.item-list:
+    - nci/item-list
+  core/drupal.progress:
+    - nci/progress
+  core/drupal.tablesort:
+    - nci/drupal.tablesort
+regions:
+  header_top: 'Header Top Bar'
+  header_main: 'Header Main'
+  navigation: 'Main Navigation'
+  content: 'Main Content'
+  sidebar: 'Sidebar'
+  footer_top: 'Footer Top'
+  footer_main: 'Footer Main'
+  back_to_top: 'Back to Top'
